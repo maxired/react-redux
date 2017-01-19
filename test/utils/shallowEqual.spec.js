@@ -70,5 +70,15 @@ describe('Utils', () => {
         )
       ).toBe(false)
     })
+
+    it('should return false if arguments have different keys', () => {
+      expect(
+        shallowEqual(
+          { a: undefined},
+          { bb: 2}
+        )
+      ).toBe(false)
+    })
+
   })
 })
